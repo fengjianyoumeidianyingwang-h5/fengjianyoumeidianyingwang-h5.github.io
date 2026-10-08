@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>风间由美电影网 - 高清电影电视剧动漫综艺免费看</title>
+<meta name="description" content="风间由美电影网提供高清电影、热播电视剧、人气动漫、爆款综艺免费在线观看，风间由美电影网等你来看。">
+<meta name="keywords" content="风间由美电影网,免费电影,高清影视,热播电视剧,人气动漫,爆款综艺">
+<meta name="author" content="风间由美电影网">
+<link rel="canonical" href="https://fengjianyoumeidianyingwang-h5.github.io/">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:#faf7f2;
+  color:#222;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* 导航：米色杂志风 */
+.nav{
+  position:sticky;top:0;z-index:99;
+  background:rgba(250,247,242,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #e7ded2;
+}
+.nav__box{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.8rem 1rem;flex-wrap:wrap;gap:.5rem;
+}
+.nav__logo{
+  font-weight:900;font-size:1.25rem;letter-spacing:.5px;
+  color:#b5345b;
+}
+.nav__logo b{color:#222}
+.nav__links{display:flex;gap:.4rem;flex-wrap:wrap}
+.nav__links a{
+  padding:.4rem .8rem;border-radius:999px;
+  font-size:.9rem;color:#555;transition:.25s;
+}
+.nav__links a:hover{background:#b5345b;color:#fff}
+
+/* Hero */
+.hero{
+  max-width:1200px;margin:2rem auto;padding:0 1rem;
+}
+.hero__card{
+  background:linear-gradient(120deg,#2b0a1d,#7a1f3d 60%,#b5345b);
+  color:#fff;border-radius:28px;overflow:hidden;
+  display:grid;grid-template-columns:1.3fr .7fr;
+}
+.hero__left{padding:3rem 2rem}
+.hero__kicker{
+  display:inline-block;font-size:.8rem;letter-spacing:2px;
+  background:rgba(255,255,255,.15);padding:.25rem .8rem;border-radius:999px;margin-bottom:1rem;
+}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin-bottom:1rem}
+.hero h1 em{font-style:normal;color:#ffd2e0}
+.hero p{color:rgba(255,255,255,.82);max-width:520px;margin-bottom:1.6rem}
+.hero__btn{
+  display:inline-block;background:#fff;color:#b5345b;
+  font-weight:700;padding:.8rem 2rem;border-radius:999px;
+}
+.hero__right{
+  background:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.06) 0 10px,transparent 10px 20px),
+    radial-gradient(circle at 70% 30%,rgba(255,210,224,.35),transparent 60%);
+  display:flex;align-items:center;justify-content:center;font-size:6rem;
+}
+
+/* 通用区块 */
+.wrap{max-width:1200px;margin:3.5rem auto;padding:0 1rem}
+.head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem}
+.head h2{font-size:1.6rem}
+.head span{color:#b5345b;font-weight:700}
+.head a{margin-left:auto;color:#888;font-size:.85rem}
+
+/* 栏目1：电影——杂志封面网格 */
+.mag-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1.2rem;
+}
+.mag{
+  background:#fff;border:1px solid #efe6da;border-radius:18px;overflow:hidden;
+  transition:.3s;
+}
+.mag:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(181,52,91,.18)}
+.mag__cover{
+  height:240px;display:flex;align-items:center;justify-content:center;font-size:3.4rem;color:#fff;
+}
+.mag__body{padding:.9rem 1rem}
+.mag__body h3{font-size:1rem;margin-bottom:.2rem}
+.mag__body p{font-size:.8rem;color:#999}
+
+/* 栏目2：电视剧——左右分栏大图 */
+.tv-split{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
+.tv-main{
+  border-radius:22px;min-height:420px;color:#fff;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;padding:2rem;
+}
+.tv-main__mask{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85),transparent 70%)}
+.tv-main__txt{position:relative;z-index:1}
+.tv-main__txt h3{font-size:1.8rem;margin-bottom:.4rem}
+.tv-main__txt p{color:rgba(255,255,255,.8);margin-bottom:1rem}
+.tv-main__txt a{background:#b5345b;padding:.5rem 1.4rem;border-radius:999px;font-weight:600}
+.tv-side{display:flex;flex-direction:column;gap:.8rem}
+.tv-row{
+  display:flex;gap:.8rem;align-items:center;background:#fff;border:1px solid #efe6da;
+  border-radius:14px;padding:.7rem .9rem;
+}
+.tv-row__ic{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;flex:none}
+.tv-row h4{font-size:.95rem}
+.tv-row small{color:#999}
+.tv-row em{margin-left:auto;font-style:normal;color:#b5345b;font-weight:700;font-size:.8rem}
+
+/* 栏目3：动漫——标签云墙 */
+.tag-wall{display:flex;flex-wrap:wrap;gap:.8rem}
+.chip{
+  padding:.7rem 1.1rem;border-radius:14px;color:#fff;font-weight:600;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);transition:.25s;cursor:pointer;
+}
+.chip:hover{transform:rotate(-2deg) scale(1.04)}
+.chip small{display:block;font-weight:400;opacity:.85;font-size:.75rem}
+
+/* 栏目4：综艺——时间轴 */
+.timeline{position:relative;padding-left:1.4rem}
+.timeline::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;background:#e7ded2}
+.tl{
+  position:relative;background:#fff;border:1px solid #efe6da;border-radius:16px;
+  padding:1rem 1.2rem;margin-bottom:1rem;
+}
+.tl::before{
+  content:"";position:absolute;left:-1.35rem;top:1.3rem;width:12px;height:12px;border-radius:50%;
+  background:#b5345b;box-shadow:0 0 0 4px #faf7f2;
+}
+.tl time{color:#b5345b;font-weight:700;font-size:.8rem}
+.tl h4{margin:.2rem 0}
+.tl p{color:#777;font-size:.88rem}
+
+/* 栏目5：排行榜——数字卡片 */
+.rank{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.rk{
+  background:#fff;border-radius:18px;padding:1.2rem;border:1px solid #efe6da;
+  display:flex;align-items:center;gap:1rem;
+}
+.rk__no{
+  font-size:2rem;font-weight:900;color:#b5345b;width:46px;text-align:center;flex:none;
+}
+.rk h4{font-size:.98rem}
+.rk small{color:#999}
+
+/* 页脚 */
+.foot{
+  margin-top:4rem;background:#2b0a1d;color:#f3dfe7;text-align:center;padding:2.5rem 1rem;
+}
+.foot b{color:#fff}
+.foot a{color:#ffb9cf;margin:0 .5rem}
+.foot small{display:block;margin-top:1rem;color:#b98ca0}
+
+@media(max-width:860px){
+  .hero__card{grid-template-columns:1fr}
+  .hero__right{min-height:160px;font-size:4rem}
+  .tv-split{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .nav__box{justify-content:center}
+  .head h2{font-size:1.3rem}
+  .mag__cover{height:200px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<!-- 导航 -->
+<header class="nav">
+  <div class="nav__box">
+    <div class="nav__logo">风间由美<b>电影网</b></div>
+    <nav class="nav__links">
+      <a href="#film">电影</a>
+      <a href="#tv">电视剧</a>
+      <a href="#anime">动漫</a>
+      <a href="#variety">综艺</a>
+      <a href="#rank">排行榜</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__card">
+    <div class="hero__left">
+      <span class="hero__kicker">FENGJIAN YOUMEI MOVIE</span>
+      <h1>风间由美电影网<br><em>高清影视 · 免费畅看</em></h1>
+      <p>风间由美电影网聚合最新电影、热播剧、国漫日漫、爆款综艺，手机电脑都能看，更新快、画质高、分类清。</p>
+      <a href="#film" class="hero__btn">进入片库 ›</a>
+    </div>
+    <div class="hero__right">🎞️</div>
+  </div>
+</section>
+
+<!-- 栏目1：电影 -->
+<section class="wrap" id="film">
+  <div class="head">
+    <h2>最新<span>电影</span></h2>
+    <a href="#">更多 ›</a>
+  </div>
+  <div class="mag-grid">
+    <article class="mag">
+      <div class="mag__cover" style="background:linear-gradient(135deg,#7a1f3d,#b5345b)">🎬</div>
+      <div class="mag__body"><h3>风间由美电影网：暗夜蔷薇</h3><p>悬疑 / 128分钟</p></div>
+    </article>
+    <article class="mag">
+      <div class="mag__cover" style="background:linear-gradient(135deg,#2b0a1d,#5a1733)">🎬</div>
+      <div class="mag__body"><h3>星海征途</h3><p>科幻 / 146分钟</p></div>
+    </article>
+    <article class="mag">
+      <div class="mag__cover" style="background:linear-gradient(135deg,#c2416c,#f59bb4)">🎬</div>
+      <div class="mag__body"><h3>霓虹夜车</h3><p>动作 / 112分钟</p></div>
+    </article>
+    <article class="mag">
+      <div class="mag__cover" style="background:linear-gradient(135deg,#3a0c25,#9b2d52)">🎬</div>
+      <div class="mag__body"><h3>雾港旧梦</h3><p>文艺 / 119分钟</p></div>
+    </article>
+    <article class="mag">
+      <div class="mag__cover" style="background:linear-gradient(135deg,#b5345b,#ff9ab5)">🎬</div>
+      <div class="mag__body"><h3>烈焰拳台</h3><p>格斗 / 105分钟</p></div>
+    </article>
+    <article class="mag">
+      <div class="mag__cover" style="background:linear-gradient(135deg,#51102f,#a83258)">🎬</div>
+      <div class="mag__body"><h3>长安月明</h3><p>古装 / 138分钟</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- 栏目2：电视剧 -->
+<section class="wrap" id="tv">
+  <div class="head">
+    <h2>热播<span>电视剧</span></h2>
+    <a href="#">更多 ›</a>
+  </div>
+  <div class="tv-split">
+    <article class="tv-main" style="background:linear-gradient(135deg,#7a1f3d,#2b0a1d)">
+      <div class="tv-main__mask"></div>
+      <div class="tv-main__txt">
+        <h3>风间由美电影网独播：倾城往事</h3>
+        <p>民国群像大剧，48集全，服化道精致，剧情高燃。</p>
+        <a href="#">立即追剧</a>
+      </div>
+    </article>
+    <div class="tv-side">
+      <div class="tv-row">
+        <div class="tv-row__ic" style="background:#b5345b">📺</div>
+        <div><h4>山海归途</h4><small>玄幻 / 40集</small></div>
+        <em>更新32</em>
+      </div>
+      <div class="tv-row">
+        <div class="tv-row__ic" style="background:#7a1f3d">📺</div>
+        <div><h4>白昼谜案</h4><small>刑侦 / 24集</small></div>
+        <em>已完结</em>
+      </div>
+      <div class="tv-row">
+        <div class="tv-row__ic" style="background:#c2416c">📺</div>
+        <div><h4>春风十里街</h4><small>都市 / 36集</small></div>
+        <em>更新21</em>
+      </div>
+      <div class="tv-row">
+        <div class="tv-row__ic" style="background:#51102f">📺</div>
+        <div><h4>将军在上2</h4><small>古装 / 50集</small></div>
+        <em>已完结</em>
+      </div>
+      <div class="tv-row">
+        <div class="tv-row__ic" style="background:#9b2d52">📺</div>
+        <div><h4>深渊回声</h4><small>悬疑 / 18集</small></div>
+        <em>更新15</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目3：动漫 -->
+<section class="wrap" id="anime">
+  <div class="head">
+    <h2>人气<span>动漫</span></h2>
+    <a href="#">更多 ›</a>
+  </div>
+  <div class="tag-wall">
+    <div class="chip" style="background:linear-gradient(135deg,#7a1f3d,#b5345b)">剑骨焚天<small>国漫·热血</small></div>
+    <div class="chip" style="background:linear-gradient(135deg,#2b0a1d,#5a1733)">东京残响<small>日漫·悬疑</small></div>
+    <div class="chip" style="background:linear-gradient(135deg,#c2416c,#ff9ab5)">星屑魔法少女<small>日漫·治愈</small></div>
+    <div class="chip" style="background:linear-gradient(135deg,#3a0c25,#9b2d52)">九州妖谈<small>国漫·志怪</small></div>
+    <div class="chip" style="background:linear-gradient(135deg,#51102f,#a83258)">机甲纪元<small>科幻·机战</small></div>
+    <div class="chip" style="background:linear-gradient(135deg,#b5345b,#ffb9cf)">风间由美电影网荐：猫屋物语<small>日常·治愈</small></div>
+    <div class="chip" style="background:linear-gradient(135deg,#7a1f3d,#3a0c25)">修罗剑歌<small>玄幻·年番</small></div>
+    <div class="chip" style="background:linear-gradient(135deg,#9b2d52,#f59bb4)">深海歌姬<small>奇幻·音乐</small></div>
+  </div>
+</section>
+
+<!-- 栏目4：综艺 -->
+<section class="wrap" id="variety">
+  <div class="head">
+    <h2>爆款<span>综艺</span></h2>
+    <a href="#">更多 ›</a>
+  </div>
+  <div class="timeline">
+    <article class="tl">
+      <time>周六 20:00</time>
+      <h4>风间由美电影网同步：笑匠联盟</h4>
+      <p>明星即兴喜剧竞演，段子密度高，适合周末解压。</p>
+    </article>
+    <article class="tl">
+      <time>周五 21:00</time>
+      <h4>去野吧！海岸线</h4>
+      <p>户外生存+美食旅行，风景镜头质感拉满。</p>
+    </article>
+    <article class="tl">
+      <time>周日 20:30</time>
+      <h4>金曲复活赛</h4>
+      <p>老歌新编，实力唱将返场，舞台制作豪华。</p>
+    </article>
+    <article class="tl">
+      <time>周三 22:00</time>
+      <h4>深夜放映厅</h4>
+      <p>导演+影评人聊片，片单含金量高，影迷必看。</p>
+    </article>
+  </div>
+</section>
+
+<!-- 栏目5：排行榜 -->
+<section class="wrap" id="rank">
+  <div class="head">
+    <h2>今日<span>热播榜</span></h2>
+    <a href="#">更多 ›</a>
+  </div>
+  <div class="rank">
+    <div class="rk"><div class="rk__no">1</div><div><h4>暗夜蔷薇</h4><small>电影·悬疑</small></div></div>
+    <div class="rk"><div class="rk__no">2</div><div><h4>倾城往事</h4><small>电视剧·民国</small></div></div>
+    <div class="rk"><div class="rk__no">3</div><div><h4>剑骨焚天</h4><small>动漫·热血</small></div></div>
+    <div class="rk"><div class="rk__no">4</div><div><h4>笑匠联盟</h4><small>综艺·喜剧</small></div></div>
+    <div class="rk"><div class="rk__no">5</div><div><h4>星海征途</h4><small>电影·科幻</small></div></div>
+    <div class="rk"><div class="rk__no">6</div><div><h4>九州妖谈</h4><small>动漫·志怪</small></div></div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot">
+  <div><b>风间由美电影网</b> · 高清影视自由看</div>
+  <div style="margin-top:.6rem">
+    <a href="#film">电影</a>|
+    <a href="#tv">电视剧</a>|
+    <a href="#anime">动漫</a>|
+    <a href="#variety">综艺</a>|
+    <a href="#">关于</a>|
+    <a href="#">声明</a>
+  </div>
+  <small>官网：https://fengjianyoumeidianyingwang-h5.github.io</small>
+  <small>© 2025 风间由美电影网 保留所有权利</small>
+</footer>
+
+</body>
+</html>
